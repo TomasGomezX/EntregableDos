@@ -103,6 +103,22 @@ function tienenMismaLongitud(str1, str2) {
      * Se debe añadir el elemento al final del arreglo y luego regresar el arreglo
      */
     // Tu código:
+
+    const agregarItemAlFinalDelArray = (array, elemento) => {
+        // Añade el elemento al final del arreglo usando el método push()
+        array.push(elemento);
+        // Retorna el arreglo con el elemento agregado
+        return array;
+      };
+      
+      // Ejemplo de uso:
+      const miArray = [1, 2, 3];
+      const elementoNuevo = 4;
+      
+      const resultado = agregarItemAlFinalDelArray(miArray, elementoNuevo);
+      
+      console.log(resultado); // Esto imprimirá [1, 2, 3, 4]
+      
   }
 
   const nuevoUsuario = (nombre, email, password) => {
@@ -179,41 +195,41 @@ function tienenMismaLongitud(str1, str2) {
   
 
 class Persona {
-  // ---------------------------------------------------------------------------//
-  //Crea el constructor de la clase "Persona"
-  //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
-  //Debe tener un método llamado "detalle" que nos devuelve un objeto con 
-  //las propiedades de la persona y sus valores.
-  //un ejemplo del objeto es el siguiente
-  //Ej: { 
-    //   Nombre: 'Juan',
-    //   Apellido: 'Perez',
-    //   Edad: 22,
-    //   Domicilio: 'Saavedra 123'
-    //  }
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
-
-        constructor(nombre, apellido, edad, domicilio) {
-        // Inicializa las propiedades del objeto
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.domicilio = domicilio;
+    // Crea el constructor de la clase "Persona"
+    // Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
+    constructor(nombre, apellido, edad, domicilio) {
+      // Inicializa las propiedades del objeto en el constructor
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.domicilio = domicilio;
     }
-
+  
+    // Método llamado "detalle" que devuelve un objeto con las propiedades de la persona y sus valores
     detalle() {
-        // Devuelve un objeto con las propiedades y valores de la persona
-        return {
-            Nombre: this.nombre,
-            Apellido: this.apellido,
-            Edad: this.edad,
-            Domicilio: this.domicilio
-        };
+      // Devuelve un objeto con las propiedades y valores de la persona
+      return {
+        Nombre: this.nombre,
+        Apellido: this.apellido,
+        Edad: this.edad,
+        Domicilio: this.domicilio,
+      };
     }
+  }
+  
+  // Ejemplo de cómo crear una instancia de Persona
+  const persona1 = new Persona('Juan', 'Perez', 22, 'Saavedra 123');
+  
+  // Obtener el detalle de la persona1
+  const detallePersona1 = persona1.detalle();
+  
+  console.log(detallePersona1); // Esto imprimirá el objeto con los detalles de la persona1
+  
+       
+        
 
-    }
-}
+
+
 
 const crearInstanciaPersona = (nombre, apellido, edad, dir)=>{
     //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
